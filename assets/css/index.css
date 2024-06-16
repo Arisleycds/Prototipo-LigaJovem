@@ -1,0 +1,98 @@
+:root {
+    --cor-base: #C9F2C7;
+    --cor-primaria: #1481BA;
+    --cor-segundaria: #11B5E4;
+    --cor-turquesa: #00ff88;
+}
+
+body {
+    background-color: var(--cor-base);
+}
+
+header {
+    background-color: var(--cor-primaria);
+}
+
+header banner {
+    background-color: var(--cor-primaria);
+}
+
+header banner .container-fluid {
+    background-color: var(--cor-primaria);
+    border: 0 auto;
+    padding: 10px;
+}
+
+header banner .container-fluid a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 200%;
+    color: white;
+}
+
+header banner .input-group {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+header banner .container-fluid a img {
+    margin-right: 20px;
+}
+
+header banner i {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header banner form {
+    margin: 3%;
+    width: 45%;
+    background-color: white;
+}
+
+header navBar div {
+    background-color: var(--cor-segundaria);
+}
+
+main {
+    padding: 20px;
+}
+
+main form {
+    width: 100%;
+    background-color: var(--cor-turquesa);
+    display: flex;
+    justify-content: space-between;
+}
+
+main .container {
+    width: 75%;
+    padding: 3%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    background-color: var(--cor-turquesa);
+}
+
+main cards {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin-top: 3%;
+    margin-left: 6%;
+}
+
+main cards div {
+    margin: 1%;
+}
+
+main .card.w-75.mb-3 {
+    width: 100%;
+
+}
