@@ -14,16 +14,17 @@ header {
 }
 
 header banner {
+    display: flex;
+    font-size: 150%;
     background-color: var(--cor-primaria);
+    justify-content: center;
+    align-content: center;
+    padding: 2%;
+    color: white;
+    
 }
 
-header banner .container-fluid {
-    background-color: var(--cor-primaria);
-    border: 0 auto;
-    padding: 10px;
-}
-
-header banner .container-fluid a {
+header banner a {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -40,7 +41,7 @@ header banner .input-group {
     background-color: red;
 }
 
-header banner .container-fluid a img {
+header banner a img {
     margin-right: 20px;
 }
 
@@ -51,9 +52,11 @@ header banner i {
 }
 
 header banner form {
-    margin: 3%;
-    width: 45%;
+    width: 35%;
     background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
 }
 
 header navBar div {
