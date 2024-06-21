@@ -62,3 +62,7 @@ a{
     background-color: var(--cor-base);
     text-shadow: 2px 1px white;
 }
+
+.cidade h4 {
+    text-align: center;
+}
