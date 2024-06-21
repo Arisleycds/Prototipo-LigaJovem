@@ -99,3 +99,15 @@ main .card.w-75.mb-3 {
     width: 100%;
 
 }
+
+footer li {
+    list-style: none;
+}
+
+footer {
+	background-color: #b1bdff;
+	color: #001021 ;                    
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+}

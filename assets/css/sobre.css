@@ -26,13 +26,7 @@ h2{
     margin-right: 6%;
     margin-top: 2%;
 }
-footer {
-	background-color: #b1bdff;
-	color: #001021 ;                    
-	padding: 20px;
-	text-align: center;
-	margin-top: 50px;
-}
+
 a{
     color:#034748                    
 }
@@ -57,7 +51,7 @@ a{
     height: 900px;
     background-image: url("../img/pexels-apasaric-325185.jpg");
     background-size: 100%;
-    background-position: 0px 0px;
+    background-position: 0px 20px;
     background-repeat: no-repeat;
     background-color: var(--cor-base);
     text-shadow: 2px 1px white;
@@ -65,4 +59,28 @@ a{
 
 .cidade h4 {
     text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .cidade {
+        background-image: none;
+        background-color: skyblue;
+        justify-content: center;
+        color: white;
+        text-shadow: none;
+        text-align: center;
+        height: auto;
+    }
+
+    .cidade div {
+        width: 80%;
+    }
+
+    main {
+        font-size: 140%;
+    }
+
+    main h1, main h2, main h3 {
+        text-align: center;
+    }
 }
