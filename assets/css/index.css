@@ -8,11 +8,9 @@
 body {
     background-color: var(--cor-base);
 }
-
 header {
     background-color: var(--cor-primaria);
 }
-
 header banner {
     display: flex;
     font-size: 150%;
@@ -110,4 +108,16 @@ footer {
 	padding: 20px;
 	text-align: center;
 	margin-top: 50px;
+}
+.pula{
+    float:unset;
+    margin-left: 1%;
+}
+.txt{
+    float:inline-start;
+}
+.formfundo{
+    background-color: rgb(161, 238, 238);
+    padding: 2%;
+    border-radius: 2%;
 }
