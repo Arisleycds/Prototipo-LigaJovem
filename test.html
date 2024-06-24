@@ -6,27 +6,26 @@
       <title>Document</title>
 </head>
 <body>
-      <input type="file" name="">
+      <input type="file" name="" id="inputFile">
       <input type="button" value="Enviar" id="sendImage">
 
       <script src="/socket.io/socket.io.jso"></script>
+      <script src="https://bundle.run/buffer@6.0.3"></script>
       <script>
             const socket = io();
 
-            document.getElementById("sendImage").onclick = 
+            const fileHTML = document.getElementById("inputFile")
+
+            fileHTML.addEventListener("change", 
                   (e) => {
-                        console.log("ahhhh")
-                        var data = e.originalEvent.target.files[0];
-                        var reader = new FileReader();
-                        reader.onload = function (evt) {
-                              var msg = {};
-                              msg.file = evt.target.result;
-                              msg.fileName = data.name;
-                              socket.emit("base64 file", msg);
-                              console.log(msg)
+                        const reader = new FileReader();
+                        reader.onload = function(evt) {
+                              const base64 = evt.target.result.replace(/.*base64,/, '');
+                              socket.emit('base64 file', base64);
                         };
-                        reader.readAsDataURL(data);
                   }
+            )
+                  
       </script>
 </body>
 </html>

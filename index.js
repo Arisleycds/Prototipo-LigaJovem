@@ -1,6 +1,5 @@
 const express = require('express');
 const http = require('http');
-const { dirname } = require('path');
 
 const app = express();
 const server = http.createServer(app);
@@ -18,7 +17,7 @@ io.on("connection", (socket) => {
       socket.on("base64 file", 
             (msg) => {
                   DenunBank.push(msg);
-                  consosle.log("Recebido");
+                  console.log(msg);
             }
       );
 })
