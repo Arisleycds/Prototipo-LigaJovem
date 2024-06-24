@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <input type="file" name="">
+      <input type="button" value="Enviar" id="sendImage">
+
+      <script src="/socket.io/socket.io.jso"></script>
+      <script>
+            const socket = io();
+
+            document.getElementById("sendImage").onclick = 
+                  (e) => {
+                        console.log("ahhhh")
+                        var data = e.originalEvent.target.files[0];
+                        var reader = new FileReader();
+                        reader.onload = function (evt) {
+                              var msg = {};
+                              msg.file = evt.target.result;
+                              msg.fileName = data.name;
+                              socket.emit("base64 file", msg);
+                              console.log(msg)
+                        };
+                        reader.readAsDataURL(data);
+                  }
+      </script>
+</body>
+</html>
